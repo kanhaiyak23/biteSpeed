@@ -9,6 +9,9 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 app.post('/identify', IdentityController.identify);
 
 // Start Server
